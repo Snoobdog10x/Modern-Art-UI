@@ -2,8 +2,9 @@
     <string name="app_name">ModernArtUI</string>
     <string name="action_settings">More information</string>
     <string name="action_more_info">More Information</string>
-    <string name="dialog_title">Inspired by the works of Piet Mondrian</string>
+    <string name="dialog_title">Inspired by the works of artist such as Piet Mondrian and Ben Nicholson</string>
     <string name="dialog_message">Click below to learn more!</string>
-    <string name="visit_moma">Visit MOMA</string>
-    <string name="not_now">Not Now</string>
+    <string name="alert_dialog_ok">visit MOMA</string>
+    <string name="alert_dialog_two_buttons_title">Not Now</string>
+    <string name="alert_dialog_cancel">Not Now</string>
 </resources>

@@ -26,17 +26,19 @@
 
                 <TextView
                     android:id="@+id/purplebox"
+                    android:tag="@color/purple_200"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1.1"
-                    android:background="@color/purple_500" />
+                    android:background="@color/purple_200" />
 
                 <TextView
                     android:id="@+id/pinkbox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:tag="@color/pink"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:background="@color/pink" />
@@ -59,6 +61,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
+                    android:tag="@color/red"
                     android:background="@color/red" />
 
                 <TextView
@@ -68,6 +71,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
+                    android:tag="@color/white"
                     android:background="@color/white" />
 
                 <TextView
@@ -76,6 +80,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
+                    android:tag="@color/blue"
                     android:background="@color/blue" />
             </LinearLayout>
         </LinearLayout>

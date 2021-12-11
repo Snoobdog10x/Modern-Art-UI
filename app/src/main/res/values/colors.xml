@@ -10,4 +10,5 @@
     <color name="blue">#3333FF</color>
     <color name="pink">#FF99FF</color>
     <color name="red">#FF0000</color>
+    <color name="gray">#FF0000</color>
 </resources>

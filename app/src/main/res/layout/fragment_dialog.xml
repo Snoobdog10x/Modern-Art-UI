@@ -1,6 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:id="@+id/infodialog"
+    android:background="@color/blue">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/dialog_title"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/dialog_message"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:autoSizeTextType="uniform"
+        android:layout_margin="15dp"
+        >
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_dialog_ok"
+            android:background="@color/blue"
+            android:id="@+id/okbutton"
+            android:textColor="@color/white"
+            >
+
+        </Button>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:id="@+id/exitbutton"
+            android:text="@string/alert_dialog_two_buttons_title"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            >
+
+        </Button>
+    </LinearLayout>
+</LinearLayout>
