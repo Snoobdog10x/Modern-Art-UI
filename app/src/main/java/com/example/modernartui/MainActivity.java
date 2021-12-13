@@ -26,22 +26,49 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView View[] = {(TextView) findViewById(R.id.purplebox)
+        /*TextView View[] = {(TextView) findViewById(R.id.purplebox)
                 , (TextView) findViewById(R.id.redbox)
                 , (TextView) findViewById(R.id.whitebox)
                 , (TextView) findViewById(R.id.bluebox)
-                , (TextView) findViewById(R.id.pinkbox)};
+                , (TextView) findViewById(R.id.pinkbox)};*/
+        TextView cyanbox = (TextView) findViewById(R.id.cyanbox);
+        TextView redbox = (TextView) findViewById(R.id.redbox);
+        TextView whitebox = (TextView) findViewById(R.id.whitebox);
+        TextView bluebox = (TextView) findViewById(R.id.bluebox);
+        TextView pinkbox = (TextView) findViewById(R.id.pinkbox);
+
         sb = (SeekBar) findViewById(R.id.slider);
         sb.setMax(100);
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                for (int j = 0; j < View.length; j++) {
+
+                int[] redArray = {255, 0, 0};
+                int[] blueArray = {0, 0, 255};
+                int[] greenArray = {0, 255, 0};
+
+                redArray[0] = redArray[0] - (255/100)*progress;
+                redArray[1] = redArray[1] + (229/100)*progress;
+                redArray[2] = redArray[2] + (238/100)*progress;
+                blueArray[0] = blueArray[0] + (255/100)*progress;
+                blueArray[1] = blueArray[1] + (102/100)*progress;
+                blueArray[2] = blueArray[2] - (255/100)*progress;
+                greenArray[0] = greenArray[0] - (125/100)*progress;
+                greenArray[1] = greenArray[1] - (255/100)*progress;
+                greenArray[2] = greenArray[2] + (130/100)*progress;
+
+
+                cyanbox.setBackgroundColor(Color.rgb(blueArray[0],greenArray[1],blueArray[2]));
+                redbox.setBackgroundColor(Color.rgb(redArray[0],redArray[1],redArray[2]));
+                whitebox.setBackgroundColor(Color.rgb(redArray[0],greenArray[1],blueArray[2]));
+                bluebox.setBackgroundColor(Color.rgb(blueArray[0],blueArray[1],blueArray[2]));
+                pinkbox.setBackgroundColor(Color.rgb(redArray[0],blueArray[1],blueArray[2]));
+                /*for (int j = 0; j < View.length; j++) {
                     TextView text = View[j];
                     if (!text.getTag().toString().equals("#FFFFFF")||!text.getTag().toString().equals("#FF0000")) {
                             text.setBackgroundColor(getColorbyProgress(progress,text));
                     }
-                }
+                }*/
             }
 
             @Override
